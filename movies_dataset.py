@@ -45,7 +45,7 @@ max_rating = df["Rating"].max()
 
 print("Highest movie rate:", max_rating)
 #Question1
-# Find the highest-rated movie without using idxmax
+# Find the highest-rated movie 
 highest_rated_movie = df.sort_values(by="Rating", ascending=False).iloc[0]
 
 # Display the details of the highest-rated movie
@@ -100,7 +100,7 @@ high_rated_movies = df[df["Rating"] >= 8.0]
 num_high_rated_movies = len(high_rated_movies)
 
 # Display the result
-print("Number of Movies with a Rating of at Least 8.0:", num_high_rated_movies)
+print("Number of Movies with a Rating of at least 8.0:", num_high_rated_movies)
 
 #Question7
 # Filter movies directed by Christopher Nolan
@@ -116,7 +116,7 @@ print("Median Rating of Movies Directed by Christopher Nolan:", median_rating_no
 # Group the DataFrame by release year and calculate the average rating for each year
 average_rating_by_year = df.groupby("Year")["Rating"].mean()
 
-# Find the year with the highest average rating without using idxmax
+# Find the year with the highest average rating
 year_highest_average_rating = average_rating_by_year[average_rating_by_year == average_rating_by_year.max()].index[0]
 
 # Display the result
